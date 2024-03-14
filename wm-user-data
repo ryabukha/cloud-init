@@ -7,11 +7,13 @@ system_info:
     sudo: ["ALL=(ALL) NOPASSWD:ALL"]
 disable_root: false
 ssh_pwauth: yes
+ssh_authorized_keys:
+    - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm8MaEYHM/ghXviSraf85OFcjOkU+b6HBMxnpY7IxoohuQn0/qH8Oyvk/jZ8AgB4wEez/bLBlnv4c1r99Yr3oUWVFaQW4M0xhU/rT3bbwBnX2P61kvdx9Wt9t4dlxHpcUbJO+AJn+H7AvE8AWFnrH60Ba+VFUqrcEWGafNXEadhq7OATLT/UiMCeoBr9O/ZeXxk9wPlOxkKXXitfOJEk3v8MKhT0257iNhm5ntTfNWi3W9me4KUirzF4h/1BuiYr4Pun/CKYguVfnmjIvggUpK4xjS6LPSH+3e0b9RxB+TT1pGmFwo3FcPHex4HsTau1VrkGVJRQ5UzyohaIfVcQ/EdisUfSq0mwCTWB+vvjo4loEUQ5cVC4tZ4XibATt2GgNuWkyQz1EIBv69879nLC6SwFKdIQ688brEwl98i2GK+O3wWqYygj9dvwB4yNtLsWHTE0uW8abTstMSHxBtS8P0Z80PXLr5J02pMZ37vs9g22xUSyaDwnH0zPde7T/3yrChsgPlSpP9Wm0tkiIVsiEfi/s4jTriXnDLKdIZCWSmiRAH0VKEJrqIGGKGbNoH61w5uZDhvdPbFcgaIkn0JEtdQvpzaVFGZbWdcUBtnI1TIu60zF03K7W1u8578np6am/kv2Wz3UbEPheYruwZue59XOM6OIQ7vfN03DYHYaL2bw== ci-user@cicd"
+
 chpasswd:
   list: |
-# mkpasswd -m sha-512 VMware1!    
-ubuntu:$6$eExyHryb$yJ3T3mUSpNCGQmcnV6DGDSGEDmMmlzkldxTGb4oHIQiTpvve3OhaaQBWHxSL9b8.6EyONH.SYFtSpR5DLJK641
-# mkpasswd -m sha-512 VMware1!       root:$6$EK42YS/aa$NpHnqwBhdCEu0pIGlkOBl6e5ZFYUHovTjXaqSGGcOs1eYeHfuY38PBdcKFql4xVoxrIAUePDbBnPajEasyy8r.
+    ubuntu:$6$j91YXNcqII4m7/z3$.4xbTog/vKjcLFWoYlkrQATHFBG.gY0EC9gS1vDH7uZ/xrJ3rxUMu6tj4OvukTxSCTm9FmTxCQJuNm1j8uFBX1   
+    root:$6$j91YXNcqII4m7/z3$.4xbTog/vKjcLFWoYlkrQATHFBG.gY0EC9gS1vDH7uZ/xrJ3rxUMu6tj4OvukTxSCTm9FmTxCQJuNm1j8uFBX1
   expire: false
 package_upgrade: true
 package_reboot_if_required: true
