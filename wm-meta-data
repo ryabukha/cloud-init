@@ -1,0 +1,2 @@
+instance-id: "vmsvc-cloudinit-0"
+local-hostname: "vmsvc-cloudinit-0"
